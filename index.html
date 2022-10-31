@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        The Simple Library
+    </div>
+    <div id="content-area">
+        <div id="forms">
+            <form action="" class="add-book-form" id="input-form">
+                <div class="form-input-div"><label class="input-label"  for="title">Title</label><input id="inputTitle"  type="text"></div>
+                <div class="form-input-div"><label class="input-label" for="author">Author</label><input name="inputAuthor" type="text"></div>
+                <div class="form-input-div"><label class="input-label" for="pages">Number of Pages</label><input name="inputPages" type="number"></div>
+                <div class="form-input-div"><label class="input-label" for="read">Read?</label><input name="inputRead" class="checkbox" type="checkbox"></div>
+                <div class="form-input-div"><input name="inputSubmit" class="submit-button" type="button" value="Submit"></div>
+            </form>
+        </div>
+        <div id="tableContainer">
+            <table class="books-table" id="booksTable">
+                <tr class="table-header">
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="footer">Test text</div>
+</body>
+</html>
