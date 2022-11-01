@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -11,24 +12,64 @@ body{
 }
 
 #header{
-    background-color: blue;
+    background-color: #D9E5D6;
     grid-area: 1/1/1/11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+h1{
+    font-size: 28px;
+}
+
+#open-form-button{
+    height: 2rem;
+    width: 100px;
+
+    background-color: #EDDEA4;
+    
+    border-radius: 5px;
+    border: none;
 }
 
 #content-area{
-    background-color: green;
+    background-color: #00A7E1;
     grid-area: 2/1/10/11;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min-content, 25%);
+    overflow: auto;
+    padding: 1rem;
+    gap: 2rem;
 }
 
+/* Form Styling */
+
 #forms{
-    width: 50%;
-    height: 100%;
+    width: 350px;
+    height: 300px;
+    z-index: 1;
+    
+    position: fixed;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #D9E5D6;
+    padding: 2rem;
+
+    border-top: 10px solid #FF9B42;
+    border-radius: 0 0 10px 10px;
 
     display: flex;
+    flex-direction: column;
+    
     justify-content: center;
-    margin: 1rem;
+    align-items: center;
 }
 
 .add-book-form{
@@ -40,7 +81,12 @@ body{
 .form-input-div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: .5rem 0;
+}
+
+.string-input{
+    height: 1.5em;
 }
 
 .input-label{
@@ -48,44 +94,87 @@ body{
 }
 
 .checkbox{
-    height: 1rem;
-    width: 1rem;
+    height: 1.5em;
+    width: 1.5em;
     margin: auto;
 }
 
 .submit-button{
     box-sizing: border-box;
-    margin:auto
+    margin:auto;
+    height: 2em;
+    width: 150px;
+    background-color: #FF9B42;
+    border: none;
 }
 
+#add-book-close{
+    background-color: transparent;
+    border: none;
+}
+
+.form-close-button{
+    margin: -2rem -2rem auto auto;
+}
+
+.material-symbols-outlined {
 
 
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
 
-#table{
-    width: 50%;
-    height: 100%;
+/* Card Styling */
+
+.card{
+    max-width: 300px;
+    min-width: max-content;
+    background-color: #EDDEA4;
+    border-top: solid #FBCBB2 5px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    
+    padding: .5rem;
+
+    border-radius: 0px 0px 5px 5px;
 }
 
-.books-table{
-    width: 100%;
-    border: 2px black solid;
-    margin: 1rem;
+.card-info{
+    margin-bottom: .5rem;
+    border-bottom: solid grey 2px;
 }
 
-.table-data{
-    text-align: center;
+.delete-card-button{
+    height: 1rem;
+    width: 1rem;
+    margin-left: auto;
+    margin-bottom: -1rem;
+
+    background-color: transparent;
+    border: none;
 }
 
+.delete-card-button > .material-icons{
 
-.table-header > th{
-    text-align: center;
+    font-size: .8rem;
+
 }
+
+.card-read{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
 
 #footer{
-    background-color: pink;
+    background-color: #D9E5D6;
     grid-area: 10/1/11/11   
 }
+
